@@ -1,0 +1,1070 @@
+# Copyright (C) 2012 nrelate Flyout
+# This file is distributed under the same license as the nrelate Flyout package.
+msgid ""
+msgstr ""
+"Project-Id-Version: nrelate Flyout 0.51.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/nrelate-flyout\n"
+"POT-Creation-Date: 2012-03-09 18:54:34+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: admin/admin-messages.php:48
+msgid "Service Status:"
+msgstr ""
+
+#: admin/common-50.php:27 admin/common.php:174
+msgid ""
+"Please <a href=\"%s\" target=\"_blank\">click here</a> to read our Terms of "
+"Service on our website."
+msgstr ""
+
+#: admin/common-50.php:78
+msgid "<a href=\"%s\">Click here to update %s to %s version automatically</a>"
+msgstr ""
+
+#: admin/common-50.php:103
+msgid ""
+"Running the latest versions of nrelate plugins is highly recommended.<br/>%"
+"s<br/><br/>"
+msgstr ""
+
+#: admin/common-50.php:104
+msgid "%s Disregard %s"
+msgstr ""
+
+#: admin/common-50.php:123
+msgid ""
+"It seems like you are running incompatible versions of nrelate plugins.  "
+"Please update to the latest versions. <a href=\"%s\">Click here to check.</"
+"a><br>(If you believe this message is incorrect, you can reset it by "
+"deactivating and reactivating each nrelate plugin.)"
+msgstr ""
+
+#: admin/common-50.php:132
+msgid ""
+"Running the latest versions of nrelate plugins is highly recommended.&nbsp;%"
+"s&nbsp;"
+msgstr ""
+
+#: admin/common-50.php:276
+msgid ""
+"%s Click Here, to enter your custom field on the nrelate dashboard, under "
+"CUSTOM FIELD FOR IMAGES settings. > %s"
+msgstr ""
+
+#: admin/common-50.php:284
+msgid ""
+"%s Click Here, to select categories to exclude under the EXCLUDE CATEGORIES "
+"settings. > %s"
+msgstr ""
+
+#: admin/common-50.php:305
+msgid "To use our widget, visit %syour widget page.%s"
+msgstr ""
+
+#: admin/common-50.php:319
+msgid ""
+"nrelate can display content ads within the plugin and you can earn money. To "
+"signup, please %sregister at nrelate Partners and create an account%s."
+msgstr ""
+
+#: admin/common-50.php:336
+msgid "%sTry out some new nrelate features, by selecting the BETA VERSION.%s"
+msgstr ""
+
+#: admin/common-50.php:343
+msgid ""
+"%sTo reset the plugin to defaults, check the box below, deactivate the "
+"plugin, and then reactivate it.%s"
+msgstr ""
+
+#: admin/common-50.php:355
+msgid ""
+"No CSS Stylesheet is selected for Thumbnails mode. Please change this "
+"setting."
+msgstr ""
+
+#: admin/common-50.php:356
+msgid ""
+"No CSS Stylesheet is selected for Text mode. Please change this setting."
+msgstr ""
+
+#: admin/common-50.php:357
+msgid ""
+"When selecting TEXT mode you must show either <a href="
+"\"#nrelate_show_post_title\">Post Title</a> or <a href="
+"\"#nrelate_show_post_excerpt\">Post Excerpt</a>."
+msgstr ""
+
+#: admin/common-50.php:360 admin/common-50.php:373
+#: admin/nrelate-admin-settings.php:300
+#: flyout_settings/nrelate-flyout-animation-styles-settings.php:188
+msgid "Save Changes"
+msgstr ""
+
+#: admin/common-50.php:361
+#: flyout_settings/nrelate-flyout-animation-styles-settings.php:185
+msgid "Preview"
+msgstr ""
+
+#: admin/common.php:51
+msgid "nrelate settings updated"
+msgstr ""
+
+#: admin/common.php:75
+msgid " &amp; W3 Total Cache Page Cache flushed"
+msgstr ""
+
+#: admin/common.php:87
+msgid " &amp; WP Super Cache flushed"
+msgstr ""
+
+#: admin/common.php:143 nrelate-flyout.php:99
+msgid "nrelate Warning(s):"
+msgstr ""
+
+#: admin/common.php:147
+msgid ""
+"You're running WordPress version %1$s. nrelate requires WordPress version %2"
+"$s.<br/>Please upgrade to WordPress version %2$s."
+msgstr ""
+
+#: admin/common.php:152
+msgid ""
+"You're server is running PHP version %1$s. nrelate requires PHP version %2$s."
+"<br/>Please contact your web host and request PHP version %2$s."
+msgstr ""
+
+#: admin/common.php:155
+msgid "The nrelate plugin has been deactivated."
+msgstr ""
+
+#: admin/common.php:155 nrelate-flyout.php:101
+msgid "Click here to return to your WordPress dashboard."
+msgstr ""
+
+#: admin/common.php:190 admin/common.php:191
+#: flyout_settings/flyout-menu.php:164 flyout_settings/flyout-menu.php:182
+msgid "Dashboard"
+msgstr ""
+
+#: admin/common.php:190
+msgid "nrelate"
+msgstr ""
+
+#: admin/common.php:444
+msgid "WordPress (single user)"
+msgstr ""
+
+#: admin/common.php:444
+msgid "WordPress MU"
+msgstr ""
+
+#: admin/common.php:460
+msgid "by:"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:18
+msgid "Advertising"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:19
+msgid "Partner ID"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:19
+msgid "Sign up to earn money."
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:22
+msgid "Communication"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:23
+msgid "Send email address"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:26
+msgid "Custom Field for Images"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:27
+msgid "Enter your <b>Custom Field</b> for images, here:"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:30
+msgid "Exclude Categories"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:31
+msgid "Categories:"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:34
+msgid "Include Custom Post Types"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:35
+msgid "Post Types:"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:51
+msgid ""
+"<p>Become a part of the nrelate advertising network and earn some extra "
+"money on your blog.</p>"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:68
+msgid ""
+"<p>nrelate may need to communicate with you when we release new features or "
+"have a problem accessing your website.</br>  Check the box, below, to send "
+"nrelate the admin email address (under \"General Settings\").  We promise "
+"not to overwhelm you with email.<p/>"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:84
+msgid ""
+"<p>If you use a Custom Field to show images in your posts, you can have "
+"nrelate show those images.</p>"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:100
+msgid ""
+"<p id=\"exclude-cats\">Select the categories you want to <b>exclude</b> from "
+"ALL nrelate products.</p>"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:196
+msgid ""
+"<p id=\"include-cpt\">Select the Post Types you want to <b>include</b> in "
+"ALL nrelate products.</p>"
+msgstr ""
+
+#: admin/nrelate-admin-settings.php:290
+msgid "Common settings for all nrelate products:"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:16
+msgid "nrelate Dashboard"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:28
+msgid "Configure Installed Plugins:"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:39
+msgid "From Our Blog:"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:71
+msgid "About nrelate:"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:74
+msgid "Visit us"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:75
+msgid "Ask us"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:76
+msgid "Follow us"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:86
+msgid "Re-Index Your Site:"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:88
+msgid "Use the button below to have nrelate reindex your website."
+msgstr ""
+
+#: admin/nrelate-main-menu.php:102
+msgid ""
+"IMPORTANT: All nrelate content will be temporarily removed from your website "
+"while we reindex.<br/><center>Only use when neccessary</center>"
+msgstr ""
+
+#: admin/nrelate-main-menu.php:115
+msgid "Messages:"
+msgstr ""
+
+#: admin/styles.php:23 admin/styles.php:340
+msgid "Default"
+msgstr ""
+
+#: admin/styles.php:24 admin/styles.php:135 admin/styles.php:147
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Hover effects.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Border.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Left aligned text.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:29 admin/styles.php:140 admin/styles.php:152
+#: admin/styles.php:345 admin/styles.php:385 admin/styles.php:396
+msgid ""
+"We developed this style as a simple way to place nrelate content on any "
+"site. We wanted to keep everything simple, so that the focus is on your "
+"site's content."
+msgstr ""
+
+#: admin/styles.php:35
+msgid "Bloginity.com"
+msgstr ""
+
+#: admin/styles.php:36 admin/styles.php:159 admin/styles.php:171
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>No Border.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Centered text.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>No Hover.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:41 admin/styles.php:164 admin/styles.php:176
+msgid ""
+"This style is based upon the custom version developed at <a href=\"http://"
+"bloginity.com\" target=\"_blank\">Bloginity.com</a>.<br>Bloginity is a a "
+"young, vibrant online magazine, fashion blog, and source of culture "
+"entertainment news."
+msgstr ""
+
+#: admin/styles.php:47
+msgid "LinkWithin"
+msgstr ""
+
+#: admin/styles.php:48 admin/styles.php:183 admin/styles.php:197
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>All Capital text.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Hover Effects.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Stylized thumbnail dividing line.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:53 admin/styles.php:188 admin/styles.php:202
+msgid ""
+"This style is based upon the related thumbnail widget from <a href=\"http://"
+"linkwithin.com\" target=\"_blank\">Linkwithin.com</a>. LinkWithin is a blog "
+"widget that appears under each post."
+msgstr ""
+
+#: admin/styles.php:61
+msgid "Huffingtonpost"
+msgstr ""
+
+#: admin/styles.php:62 admin/styles.php:211 admin/styles.php:224
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Side Layout.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>No Hover Effect.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Built for Showing Excerpt.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:67 admin/styles.php:216 admin/styles.php:229
+msgid ""
+"This style is based upon the related content area on <a href=\"http://"
+"huffingtonpost.com\" target=\"_blank\">huffingtonpost.com</a>. The "
+"Huffington Post is an American news website and aggregated blog."
+msgstr ""
+
+#: admin/styles.php:74
+msgid "Trendland.net"
+msgstr ""
+
+#: admin/styles.php:75 admin/styles.php:90 admin/styles.php:237
+#: admin/styles.php:252 admin/styles.php:267 admin/styles.php:282
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Hover effects.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Border.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Left aligned text.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Text over thumbnail.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Semi-transparent text background.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:82 admin/styles.php:244 admin/styles.php:259
+msgid ""
+"This style is based upon the custom version developed at <a href=\"http://"
+"trendland.net\" target=\"_blank\">Trendland.net</a>. Trendland is an online "
+"magazine that redefines trend forecasting through a rich visual journey."
+msgstr ""
+
+#: admin/styles.php:89
+msgid "ToonBarn"
+msgstr ""
+
+#: admin/styles.php:97 admin/styles.php:274 admin/styles.php:289
+msgid ""
+"** Best with Thumbnail size of 100px or more ** This style is based upon the "
+"custom version developed at <a href=\"http://toonbarn.com\" target=\"_blank"
+"\">ToonBarn.com</a>. ToonBarn is the ultimate hang out for cartoon fans."
+msgstr ""
+
+#: admin/styles.php:104
+msgid "Polaroid"
+msgstr ""
+
+#: admin/styles.php:105 admin/styles.php:297 admin/styles.php:310
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Turns your images into Polaroid pictures.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Rotated randomly.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>**Only works well in modern browsers.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:110 admin/styles.php:302 admin/styles.php:315
+msgid ""
+"Polaroid style images. Inspired by <a href=\"http://www.zurb.com/playground/"
+"css3-polaroids\" target=\"_blank\">this article</a> at Zurb.com."
+msgstr ""
+
+#: admin/styles.php:114 admin/styles.php:319 admin/styles.php:360
+#: admin/styles.php:423 flyout_settings/flyout-animation-styles.php:71
+msgid "none"
+msgstr ""
+
+#: admin/styles.php:118 admin/styles.php:323 admin/styles.php:364
+#: admin/styles.php:427
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Allows you to create your own css.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:121 admin/styles.php:326 admin/styles.php:367
+#: admin/styles.php:430
+msgid ""
+"Selecting this option will disable all nrelate styles, allowing you to "
+"create your own."
+msgstr ""
+
+#: admin/styles.php:134 admin/styles.php:380
+msgid "Default:<br/><em>2 Columns</em>"
+msgstr ""
+
+#: admin/styles.php:146 admin/styles.php:391
+msgid "Default:<br/><em>2 Rows</em>"
+msgstr ""
+
+#: admin/styles.php:158
+msgid "Bloginity.com:<br/><em>2 Columns</em>"
+msgstr ""
+
+#: admin/styles.php:170
+msgid "Bloginity.com:<br/><em>2 Rows</em>"
+msgstr ""
+
+#: admin/styles.php:182
+msgid "LinkWithin:<br/><em>2 Columns</em>"
+msgstr ""
+
+#: admin/styles.php:196
+msgid "LinkWithin:<br/><em>2 Rows</em>"
+msgstr ""
+
+#: admin/styles.php:210
+msgid "Huffingtonpost:<br/><em>2 Columns</em>"
+msgstr ""
+
+#: admin/styles.php:223
+msgid "Huffingtonpost:<br/><em>2 Rows</em>"
+msgstr ""
+
+#: admin/styles.php:236
+msgid "Trendland.net:<br/><em>2 Columns</em>"
+msgstr ""
+
+#: admin/styles.php:251
+msgid "Trendland.net:<br/><em>2 Rows</em>"
+msgstr ""
+
+#: admin/styles.php:266
+msgid "ToonBarn:<br/><em>2 Columns</em>"
+msgstr ""
+
+#: admin/styles.php:281
+msgid "ToonBarn:<br/><em>2 Rows</em>"
+msgstr ""
+
+#: admin/styles.php:296
+msgid "Polaroid:<br/><em>2 Columns</em>"
+msgstr ""
+
+#: admin/styles.php:309
+msgid "Polaroid:<br/><em>2 Rows</em>"
+msgstr ""
+
+#: admin/styles.php:341 admin/styles.php:381 admin/styles.php:392
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Simple.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Left aligned text.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:351
+msgid "Engadget"
+msgstr ""
+
+#: admin/styles.php:352 admin/styles.php:403 admin/styles.php:415
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Colorful Bars</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Bars reduce in size.</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Highlights number of Views. ( nRelate's Most Popular "
+"plugin, only )</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: admin/styles.php:357 admin/styles.php:408 admin/styles.php:420
+msgid ""
+"Bright, Colorful Bars. Inspired by the Comments sidebar at <a href=\"http://"
+"www.engadget.com/\" target=\"_blank\">Engadget.com</a>.<br>"
+msgstr ""
+
+#: admin/styles.php:402
+msgid "Engadget:<br/><em>2 Columns</em>"
+msgstr ""
+
+#: admin/styles.php:414
+msgid "Engadget:<br/><em>2 Rows</em>"
+msgstr ""
+
+#: admin/tooltips.php:15
+msgid ""
+"Just like it says, this is where you decide whether to show thumbnail links, "
+"or text only links. If you have images in most of your posts, try out "
+"thumbnails. If you don't have pictures in your posts, it is probably best to "
+"go with text only. Try out both and see what each looks like on your site. "
+"Switching back and forth is easy."
+msgstr ""
+
+#: admin/tooltips.php:17
+msgid ""
+"This was one of the first user suggested settings we added. Every site is "
+"different, and this setting helps you fit the plugin perfectly within your "
+"post width. For example, if you want to fit a certain number of thumbnails "
+"across the bottom of the post, you will need to play with this setting and "
+"the <strong>Maximum number of posts to display</strong> setting."
+msgstr ""
+
+#: admin/tooltips.php:19
+msgid ""
+"If a post doesn't have an image, your default image will appear for that "
+"post whenever it is linked to. If you do not set a default image, for posts "
+"with no image we will display a random license free image from our database. "
+"Setting a default image is highly recommended."
+msgstr ""
+
+#: admin/tooltips.php:21
+msgid ""
+"This is where you control the title of the plugin box. Common English titles "
+"include &#34;You May Also Like&#34;, &#34;More  Reading&#34;, &#34;Also "
+"Check Out&#34;, &#34;Related Articles&#34; and so on."
+msgstr ""
+
+#: admin/tooltips.php:23
+msgid ""
+"This setting allows you to specify the number of links you want to show from "
+"your own site. You can use this setting along with thumbnail size to make "
+"the plugin fit perfectly within the width of your posts. If you want to show "
+"more than one row of thumbnail links, just select a higher number here. "
+"Note: If you are showing links to partner sites/and or advertisers, these "
+"links will be included in this number. For example, if you select 10 posts, "
+"2 Partner links, and 2 Ad links, your posts will show a total of 10 links (6 "
+"Post links, 2 Partner links and 2 Ad links)."
+msgstr ""
+
+#: admin/tooltips.php:25
+msgid ""
+"Here you can specify the maximum age of posts to display. If you write more "
+"&#34;evergreen&#34; content, it is best to make this setting go back at "
+"least as many years as your site has been around. If your content is more "
+"time sensitive, you can adjust this based on however any minutes, hours, "
+"days, or weeks you want to."
+msgstr ""
+
+#: admin/tooltips.php:27
+msgid ""
+"This allows to make sure certain categories do not show up in the plugin. To "
+"do this, you will need to go to the nRelate dashboard, select the categories "
+"you want to block, and press &#34;Save Settings&#34;. The nRelate servers "
+"will immediately reindex your website. Most people who use this have a "
+"timely/personal/or other types of posts that they do not want to always "
+"direct visitors to."
+msgstr ""
+
+#: admin/tooltips.php:29
+msgid ""
+"Leave this box selected to display the post title. You spent a lot of time "
+"writing awesome titles, so why not grab your reader's attention by "
+"displaying them? The most common types of sites that turn title &#34;"
+"off&#34; are heavily focused on photos. We think its best to leave the title "
+"on, no matter what."
+msgstr ""
+
+#: admin/tooltips.php:31
+msgid ""
+"Set the maximum character length of the title. If some of your posts have "
+"really long titles, it might be a good idea to set this to around 50."
+msgstr ""
+
+#: admin/tooltips.php:33
+msgid ""
+"You can also display an excerpt of your post by selecting this setting. This "
+"setting is highly recommended to be used along with the Huffington Post "
+"style (located in the Style Gallery). Be sure to set a maximum excerpt "
+"length or else you may stretch out the plugin on the page."
+msgstr ""
+
+#: admin/tooltips.php:35
+msgid ""
+"Set the maximum word length of the post excerpt. It's usually fine to set "
+"this at 20."
+msgstr ""
+
+#: admin/tooltips.php:37
+msgid ""
+"This setting allows you to control which pages nrelate will display on. Even "
+"if you <a href='http://nrelate.com/theblog/2011/12/22/manually-adding-"
+"nrelate-code-to-your-wordpress-template/' target='_blank'>manually</a> add "
+"our code to  your theme template, you still need to check the appropriate "
+"boxes here."
+msgstr ""
+
+#: admin/tooltips.php:39
+msgid ""
+"nrelate will automatically display <em>before</em> your post content. If you "
+"want to control where nrelate displays, you should uncheck this box, and "
+"<em>'Bottom of post (Automatic)'</em> and <a href='http://nrelate.com/"
+"theblog/2011/12/22/manually-adding-nrelate-code-to-your-wordpress-"
+"template/'>follow these instructions on manually adding our code.</a>."
+msgstr ""
+
+#: admin/tooltips.php:41
+msgid ""
+"nrelate will automatically display <em>after</em> your post content. If you "
+"want to control where nrelate displays, you should uncheck this box, and "
+"<em>'Top of post (Automatic)'</em> and <a href='http://nrelate.com/"
+"theblog/2011/12/22/manually-adding-nrelate-code-to-your-wordpress-template/' "
+"target='_blank'>follow these instructions on manually adding our code.</a>."
+msgstr ""
+
+#: admin/tooltips.php:43
+msgid ""
+"Requires <a href='#loc_manual'>manual installation</a> in your theme's 404."
+"php file. You may also use the <a href='widgets.php' target='_blank'>nrelate "
+"widget</a>, if your 404 page is widgetized."
+msgstr ""
+
+#: admin/tooltips.php:47
+msgid ""
+"When choosing to display ads, you can decide where you want them to "
+"display:\n"
+"\t\t\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t\t\t<li>MIXED: ads will be randomly distributed in nrelate "
+"content.\n"
+"\t\t\t\t\t\t\t\t<li>FIRST: ads will show before nrelate content.\n"
+"\t\t\t\t\t\t\t\t<li>LAST: ads will show after nrelate content.\n"
+"\t\t\t\t\t\t\t\t<li>SEPARATE: ads will display in a totally separate area "
+"than nrelate content, and you will have different styles to choose from in "
+"the Style Gallery. \n"
+"\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:18
+#: flyout_settings/flyout-animation-styles.php:85
+msgid "NY Times"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:19
+#: flyout_settings/flyout-animation-styles.php:86
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Easy to read</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:22
+#: flyout_settings/flyout-animation-styles.php:89
+msgid "This style is based upon the original flyout at the NYTimes.com."
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:26
+msgid "Simple"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:27
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Clean</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Round corners (CSS3 browsers only)</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:31
+msgid "A clean, simple style."
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:35
+msgid "Simply Dark"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:36
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Clean</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Semi-transparent background (Certain browsers only)</"
+"li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Round corners (CSS3 browsers only)</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:41
+msgid "A dark alternative to our \"Simple\" style."
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:45
+msgid "Centered"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:46
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Centered content</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Works well with thumbnails</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:50
+#: flyout_settings/flyout-animation-styles.php:64
+msgid ""
+"Centers your content, instead of flush left.\r\n"
+"\t\t\t\t\t\t\t\t<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t<strong>Ideas</strong>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Set width to 100%, and style to \"Fade\", to create "
+"a nice popup.</li>\r\n"
+"\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:58
+msgid "Centered Dark"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:59
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Centered content</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Works well with thumbnails</li>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Semi-transparent background (Certain browsers only)</"
+"li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:72
+msgid ""
+"<ul>\r\n"
+"\t\t\t\t\t\t\t\t\t\t<li>Allows you to create your own css</li>\r\n"
+"\t\t\t\t\t\t\t\t\t</ul>"
+msgstr ""
+
+#: flyout_settings/flyout-animation-styles.php:75
+msgid ""
+"Selecting this option will disable all nrelate animation styles, allowing "
+"you to create your own.<br>\r\n"
+"\t\t\t\t\t\t\t\tUse one of the styles above as a starting point."
+msgstr ""
+
+#: flyout_settings/flyout-menu.php:25 nrelate-flyout.php:41
+msgid "Flyout"
+msgstr ""
+
+#: flyout_settings/flyout-menu.php:93
+msgid "Ads"
+msgstr ""
+
+#: flyout_settings/flyout-menu.php:99
+msgid " General"
+msgstr ""
+
+#: flyout_settings/flyout-menu.php:99
+msgid " Advertising"
+msgstr ""
+
+#: flyout_settings/flyout-menu.php:99
+msgid " Gallery"
+msgstr ""
+
+#: flyout_settings/flyout-menu.php:99
+msgid "Animation Styles"
+msgstr ""
+
+#: flyout_settings/flyout-menu.php:163 flyout_settings/flyout-menu.php:181
+msgid "Settings"
+msgstr ""
+
+#: flyout_settings/flyout-menu.php:183
+msgid "Support Forum"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-advertising-settings.php:19
+msgid "Advertising Settings"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-advertising-settings.php:21
+msgid "Would you like to display ads?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-advertising-settings.php:22
+msgid "How many ad spaces do you wish to show?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-advertising-settings.php:23
+msgid "Where would you like to place the ads?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-advertising-settings.php:25
+msgid "Would you like to show animated \"sponsored\" text in ads?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-animation-styles-settings.php:22
+#: flyout_settings/nrelate-flyout-styles-settings.php:23
+msgid "Style Settings for&nbsp;"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-animation-styles-settings.php:22
+msgid "&nbsp;animation"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-animation-styles-settings.php:47
+#: flyout_settings/nrelate-flyout-styles-settings.php:48
+msgid ""
+"<p class=\"section-desc\">Choose a style from our gallery, or choose NONE to "
+"disable all nrelate CSS.</p>"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:38
+msgid "Main Settings"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:40
+msgid "Would you like to display thumbnails with text, or text only"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:44
+msgid "Please enter a title for the flyout content box"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:45
+msgid ""
+"<b>Maximum</b> number of posts to display from this site</br><em>To display "
+"multiple rows of thumbnails, choose more than will fit in one row.</em>"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:46
+msgid ""
+"How relevant do you want the results to be?<br/><i>Based on the amount/type "
+"of content on your website, higher relevancy settings may return little or "
+"no posts.</i>"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:47
+msgid "How deep into your archive would you like to go for flyout posts?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:48
+msgid "Exclude Categories from your flyout content."
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:49
+msgid "Show Post Title?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:51
+msgid "Show Post Excerpt?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:57
+msgid "Layout Settings"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:59
+msgid "Which side of the page should the box appear from?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:60
+msgid "Choose an Animation type,"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:60
+msgid "then an animation style"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:61
+msgid "When should the Flyout appear?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:62
+msgid ""
+"Before which HTML element should the box appear? (i.e. #comments, .entry-"
+"content)"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:63
+msgid "Width of Flyout box:"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:64
+msgid "How far from the bottom of the screen do you want the box to appear?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:65
+msgid "Change the Style"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:66
+msgid "Would you like to support nrelate by displaying our logo?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:70
+msgid "nrelate Labs"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:71
+msgid "Which nrelate version would you like to use?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:75
+msgid "Reset Settings to Default"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:76
+msgid "Would you like to restore to defaults upon reactivation?"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:111
+msgid "Low: least relevant"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:111
+msgid "Med: more relevant"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:111
+msgid "High: most relevant"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:134
+msgid "Hour(s)"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:135
+msgid "Day(s)"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:136
+msgid "Week(s)"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:137
+msgid "Month(s)"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:138
+msgid "Year(s)"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:282
+#: flyout_settings/nrelate-flyout-settings.php:299
+msgid "px"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:283
+#: flyout_settings/nrelate-flyout-settings.php:300
+msgid "%"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:318
+msgid "Choose a style from our Style Gallery"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:332
+msgid "Thumbnails"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:332
+msgid "Text"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:403
+msgid "Enter the link to your default image (include http://): <br>"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:431
+msgid "<strong>Javascript:</strong> Stable and fast"
+msgstr ""
+
+#: flyout_settings/nrelate-flyout-settings.php:431
+msgid ""
+"<strong>No Javascript:</strong> BETA VERSION: Allows search engines to index "
+"our plugin and may help your SEO."
+msgstr ""
+
+#: nrelate-abstraction.php:174
+msgid ""
+"Please make sure you are running the latest versions of all nrelate plugins. "
+"<a href=\"%s\">Click here to check.</a>"
+msgstr ""
+
+#: nrelate-flyout.php:42
+msgid ""
+"Display related content in a cool flyout box... similarly to NYTimes.com."
+msgstr ""
+
+#: nrelate-flyout.php:100
+msgid ""
+"You're running Related Content plugin version %1$s. The Flyout plugin "
+"requires Related Content version to be 0.47.4 or higher.<br/>Please upgrade "
+"to the latest release of Related Content plugin before installing the Flyout "
+"plugin."
+msgstr ""
+
+#: nrelate-flyout.php:101
+msgid "The nrelate Flyout plugin has been deactivated."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "nrelate Flyout"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.nrelate.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Easily allow related posts to flyout from the sides of your website. Click "
+"on <a href=\"admin.php?page=nrelate-flyout\">nrelate &rarr; Flyout</a> to "
+"configure your settings."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid ""
+"<a href=\"http://www.nrelate.com\">nrelate</a> and <a href=\"http://www."
+"slipfire.com\">SlipFire</a>"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://nrelate.com/"
+msgstr ""
