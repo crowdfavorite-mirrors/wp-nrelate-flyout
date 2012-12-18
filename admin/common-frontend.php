@@ -20,29 +20,32 @@ function nrelate_jquery_styles() {
 	$popular_load=0;
 	$related_load=0;
 	$flyout_load=0;
+	$nsquared_load=0;
 	if (function_exists("nrelate_popular_is_loading"))
 		$popular_load=((nrelate_popular_is_loading() || is_single())? 1:0);
 	if (function_exists("nrelate_related_is_loading"))	
 		$related_load=(nrelate_related_is_loading()? 1:0);
 	if (function_exists("nrelate_flyout_is_loading"))	
 		$flyout_load=(nrelate_flyout_is_loading()? 1:0);
+	if (function_exists("nrelate_nsquared_is_loading")) 
+		$nsquared_load=(nrelate_nsquared_is_loading()? 1:0);
 		
-	if ($related_load || $popular_load || $flyout_load) {
+	if ($related_load || $popular_load || $flyout_load || $nsquared_load) {
 
 	// Load Common CSS
-	wp_register_style('nrelate-style-common-' . str_replace(".","-",NRELATE_LATEST_ADMIN_VERSION), NRELATE_CSS_URL . 'nrelate-panels-common.min.css', false, null );
+	wp_register_style('nrelate-style-common-' . str_replace(".","-",NRELATE_LATEST_ADMIN_VERSION), NRELATE_CSS_URL . 'nrelate-panels-common.min.css', array(), NRELATE_LATEST_ADMIN_VERSION );
 	wp_enqueue_style( 'nrelate-style-common-' . str_replace(".","-",NRELATE_LATEST_ADMIN_VERSION) );
 			
 	$options=get_option('nrelate_products');
 	if(isset($options["related"]["status"]) && $options["related"]["status"]){
-		$rc_options=get_option('nrelate_related_options');
+		$rc_options=get_option('nrelate_related_options_ads');
 		if(isset($rc_options['related_display_ad']) && $rc_options['related_display_ad']==true && $rc_options['related_number_of_ads']>0){
 			wp_enqueue_script('thickbox');
 			wp_enqueue_style('thickbox');
 		}
 	}
 	if(isset($options["popular"]["status"]) && $options["popular"]["status"]){
-		$mp_options=get_option('nrelate_popular_options');
+		$mp_options=get_option('nrelate_popular_options_ads');
 		if(isset($mp_options['popular_display_ad']) && $mp_options['popular_display_ad']==true && $mp_options['popular_number_of_ads']>0){
 			wp_enqueue_script('thickbox');
 			wp_enqueue_style('thickbox');
@@ -50,7 +53,7 @@ function nrelate_jquery_styles() {
 	}
 	wp_enqueue_script('jquery');
 		
-		wp_register_script( 'nrelate_js', NRELATE_ADMIN_URL . '/common_frontend'. ( NRELATE_JS_DEBUG ? '' : '.min') .'.js', array(), null, false);
+		wp_register_script( 'nrelate_js', NRELATE_ADMIN_URL . '/common_frontend'. ( NRELATE_JS_DEBUG ? '' : '.min') .'.js', array(), NRELATE_LATEST_ADMIN_VERSION, false);
 		wp_enqueue_script('nrelate_js', array('jquery'));
 	}
 }

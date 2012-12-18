@@ -121,6 +121,30 @@ $nrelate_thumbnail_styles = array(
 									</ul>','nrelate'),
 					"info"=>__('** "Animated sponsored text in ads" are disable in this style, if you have ads turned on.<br/>This style was designed for nRelate by the team at <a href="http://LoudFeed.com" target="_blank">LoudFeed</a>.','nrelate'),
 				),
+'nsq' => array(
+          "name"=>__('nSquared Classic'),
+          "stylesheet" => "nrelate-panels-nsq",
+          "styleclass" => "nsq",
+          "layout" => "1col",
+          "features"=>__('<ul>
+                    <li>Hover effects with title transition.</li>
+                    <li>No border.</li>
+                    <li>Left aligned text.</li>
+                  </ul>','nrelate'),
+          "info"=>__('Created to be the default style for nSquared. Show off your pictures with a minimal aesthetic in mind.','nrelate'),
+        ),
+'til' => array(
+          "name"=>__('Tiles'),
+          "stylesheet" => "nrelate-panels-til",
+          "styleclass" => "til",
+          "layout" => "1col",
+          "features"=>__('<ul>
+                    <li>Hover effect with translucent title.</li>
+                    <li>No border.</li>
+                    <li>Left aligned text.</li>
+                  </ul>','nrelate'),
+          "info"=>__('A more static version of nSquared Classic.','nrelate'),
+        ),
 'none' => array(
 					"name"=>__('none'),
 					"stylesheet" => "",
@@ -132,12 +156,38 @@ $nrelate_thumbnail_styles = array(
 					"info"=>__('Selecting this option will disable all nrelate styles, allowing you to create your own.','nrelate'),
 				
 				)
+
 );
+
 
 /* = Thumbnail / Ad Styles
 -----------------------------------------------
  */ 
 $nrelate_thumbnail_styles_separate = array(
+'til-2col' => array(
+					"stylesheet" => "nrelate-panels-til",
+					"styleclass" => "til",
+					"layout" => "2col",
+					"name"=>__('Default:<br/><em>2 Columns</em>','nrelate'),
+					"features"=>__('<ul>
+										<li>Hover effects.</li>
+										<li>No border.</li>
+										<li>Left aligned text.</li>
+									</ul>','nrelate'),
+					"info"=>__('Child of nSquared Classic. More static and ','nrelate'),
+				),
+'til-2row' => array(
+					"stylesheet" => "nrelate-panels-til",
+					"styleclass" => "til",
+					"layout" => "2row",
+					"name"=>__('Default:<br/><em>2 Columns</em>','nrelate'),
+					"features"=>__('<ul>
+										<li>Hover effects.</li>
+										<li>No border.</li>
+										<li>Left aligned text.</li>
+									</ul>','nrelate'),
+					"info"=>__('Child of nSquared Classic. More static and ','nrelate'),
+				),
 'default-2col' => array(
 					"stylesheet" => "nrelate-panels-default",
 					"styleclass" => "default",

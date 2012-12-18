@@ -16,7 +16,8 @@ function options_admin_init_nr(){
 	
 	// Ad Section
 	add_settings_section('ad_section', __('Advertising','nrelate'), 'section_text_nr_ad', __FILE__);
-	add_settings_field('admin_validate_ad', __('Partner ID','nrelate').'<br>(<a href="' . NRELATE_WEBSITE_AD_SIGNUP .'" target="_blank">'.__('Sign up to earn money.','nrelate') . '</a>)', 'setting_admin_validate_ad', __FILE__, 'ad_section');	
+	add_settings_field('admin_validate_ad', __('Partner ID','nrelate').'<br>(<a href="' . NRELATE_WEBSITE_AD_SIGNUP .'" target="_blank">'.__('Sign up to earn money.','nrelate') . '</a>)', 'setting_admin_validate_ad', __FILE__, 'ad_section');
+	add_settings_field('admin_paypal_email', __('Paypal Email (so we can pay you)','nrelate'), 'setting_admin_paypal_email', __FILE__, 'ad_section');
 
 	// Communication Section
 	add_settings_section('comm_section', __('Communication','nrelate'), 'section_text_nr_comm', __FILE__);
@@ -24,7 +25,8 @@ function options_admin_init_nr(){
 	
 	// Custom Fields
 	add_settings_section('customfield_section', __('Custom Field for Images','nrelate'), 'section_text_nr_customfield', __FILE__);
-	add_settings_field('admin_custom_field', __('Enter your <b>Custom Field</b> for images, here:','nrelate'), 'setting_admin_custom_field',__FILE__,'customfield_section');
+	add_settings_field('admin_custom_field', __('Enter your <b>Custom Field</b> for images:','nrelate'), 'setting_admin_custom_field',__FILE__,'customfield_section');
+  add_settings_field('admin_custom_field_path', __('If your custom field does not include the path to your images, please enter the path here:','nrelate'), 'setting_admin_custom_field_path',__FILE__,'customfield_section');
 	
 	// Exclude categories
 	add_settings_section('excludecat_section', __('Exclude Categories','nrelate')  . nrelate_tooltip('_exclude_categories'), 'section_text_nr_excludecat', __FILE__);
@@ -48,14 +50,21 @@ add_action('admin_init', 'options_admin_init_nr' );
 
 // Section HTML: Advertising
 function section_text_nr_ad() {
-		_e('<p>Become a part of the nrelate advertising network and earn some extra money on your blog.</p>','nrelate');
+		_e('<p>Become a part of the nrelate advertising network and earn some extra money on your blog. Click on the ADVERTISING tab of a participating nRelate product settings page.</p>','nrelate');
 }
+
 
 // TEXTBOX - Validate ads
 function setting_admin_validate_ad() {
 	$options = get_option('nrelate_admin_options');
 	echo '<div id="getnrcode"></div>';
 	echo '<input id="admin_validate_ad" name="nrelate_admin_options[admin_validate_ad]" size="10" type="hidden" value="" />';
+}
+
+// TEXTBOX - paypal email address field
+function setting_admin_paypal_email(){
+	$options = get_option('nrelate_admin_options');
+	echo '<input id="admin_paypal_email" name="nrelate_admin_options[admin_paypal_email]" size="30" type="text" value="'.$options['admin_paypal_email'].'" />';
 }
 
 
@@ -91,6 +100,16 @@ function setting_admin_custom_field() {
 	echo '<div id="imagecustomfield"><input id="admin_custom_field" name="nrelate_admin_options[admin_custom_field]" size="40" type="text" value="'.$customfield.'" /></div>';
 }
 
+// TEXTBOX - Name: nrelate_admin_options[admin_custom_field_path]
+function setting_admin_custom_field_path() {
+  $options = get_option('nrelate_admin_options');
+  $customfield_path = $options['admin_custom_field_path'];
+  echo '<div id="imagecustomfield_path">
+          <input id="admin_custom_field_path" name="nrelate_admin_options[admin_custom_field_path]" size="40" type="text" value="'.$customfield_path.'" />
+          <p class="description">i.e. http://www.mysite.com/path-to-images/</p>
+          </div>';
+}
+
 ///////////////////////////
 //   Exclude Categories Settings
 //////////////////////////
@@ -124,7 +143,7 @@ jQuery(document).ready(function(){
 	jQuery('#nrelate-exclude-cats :checkbox').change(function(){
 		var me= jQuery(this);
 		if (!nrel_excluded_cats_changed) {
-			if (confirm("Any changes to this section will cause a site reindex. Are you sure you want to continue?\u000AIf Yes, press OK and then SAVE CHANGES."))
+			if (confirm("Any changes to this section will require a site reindex. Are you sure you want to continue?\u000AIf Yes, press OK, SAVE CHANGES and press the REINDEX button (Reindexing may take a while, please be patient)."))
 			{
 				nrel_excluded_cats_changed = true;
 			} 
@@ -228,7 +247,7 @@ jQuery(document).ready(function(){
 	jQuery('#nrelate-include-cpts :checkbox').change(function(){
 		var me= jQuery(this);
 		if (!nrel_include_cpts_changed) {
-			if (confirm("Any changes to this section will cause a site reindex. Are you sure you want to continue?\u000AIf Yes, press OK and then SAVE CHANGES."))
+			if (confirm("Any changes to this section will require a site reindex. Are you sure you want to continue?\u000AIf Yes, press OK, SAVE CHANGES and press the REINDEX button (Reindexing may take a while, please be patient)."))
 			{
 				nrel_include_cpts_changed = true;
 			} 
@@ -245,14 +264,18 @@ JAVA_SCRIPT;
 }
 
 /*
-*	Executes when nrelate_admin_options changes so it can call nrelate_reindex()
+*	Executes when nrelate_admin_options changes so it can ask the user to reindex
 *	if one of the changes requires complete site re-indexation
 */
 function nrelate_admin_check_options_change($new_value) {
 	$old_value = (array) get_option('nrelate_admin_options');
-	$reindex = false;
+	$reindex = array();
 	
-	$ignore_fields = array( 'admin_email_address' ); // Fields from dashboard we DON'T want to trigger reindex
+  // Fields from dashboard we DON'T want to trigger reindex
+	$ignore_fields = array(
+    'admin_email_address'
+    ,'admin_paypal_email'
+    ); 
 	
 	$fields_to_check = array_merge( array_keys( (array)$old_value ), array_keys( (array)$new_value ) );
 	$fields_to_check = array_unique( $fields_to_check );
@@ -261,18 +284,18 @@ function nrelate_admin_check_options_change($new_value) {
 		if ( in_array($field, $ignore_fields) ) continue;
 		
 		if ( isset($new_value[$field]) != isset($old_value[$field]) ) {
-			$reindex = true;
+			$reindex[] = $field;
 			break;
 		}
 		
 		if ( isset($new_value[$field]) && $new_value[$field] !== $old_value[$field] ) {
-			$reindex = true;
+			$reindex[] = $field;
 			break;
 		}
 	}
 	
 	if ( $reindex ) {
-		nrelate_reindex();	
+		update_option("nrelate_reindex_required", $reindex );
 	}
 	
 	return $new_value;
@@ -316,16 +339,14 @@ function update_nrelate_admin_data(){
 	
 	// Get nrelate_admin options from wordpress database
 	$option = get_option('nrelate_admin_options');
-	$nr_user_email = get_option('admin_email');
 	$send_email = isset($option['admin_email_address']) ? $option['admin_email_address'] : null;
 	$custom_field = $option['admin_custom_field'];
-
-	switch ($send_email){
-	case true:
+	$paypal_email = $option['admin_paypal_email'];
+	
+	if($send_email){
 		$send_email = 1;
-		$user_email = $nr_user_email;
-		break;
-	default:
+		$user_email = trim(get_option('admin_email'));
+	}else{
 		$send_email = 0;
 		$user_email = null;
 	}
@@ -347,12 +368,13 @@ function update_nrelate_admin_data(){
 	// Write the parameters to be sent
 	$body=array(
 		'DOMAIN'=>$wp_root_nr,
-		'EMAIL'=>$nr_user_email,
+		'EMAIL'=>$user_email,
 		'RSSMODE'=>$rss_mode,
 		'RSSURL'=>$rssurl,
 		'KEY'=>get_option('nrelate_key'),
 		'CUSTOM'=>$custom_field,
-		'EMAILOPT'=>$send_email
+		'EMAILOPT'=>$send_email,
+		'PPEMAIL'=>$paypal_email
 	);
 	$url = 'http://api.nrelate.com/common_wp/'.NRELATE_LATEST_ADMIN_VERSION.'/processWPadmin.php';
 	

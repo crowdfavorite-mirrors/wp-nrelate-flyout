@@ -34,6 +34,15 @@ h2.nrelate-title {
 	float:left;
 	width: 100%;
 	}
+#nrelate-dashboard .priority-message {
+  background-color: #FFEBE8;
+  border-color: #CC0000;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3em;
+  padding: 5px;
+  border: 1px solid;
+}
 #nrelate-dashboard #nr-messages {
 	line-height:15px;
 }

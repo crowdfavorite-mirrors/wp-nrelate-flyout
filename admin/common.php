@@ -166,12 +166,12 @@ function nrelate_system_check(){
 function nrelate_tos($dummy='') {
 
 	$args=array("timeout"=>2);
-	$result = wp_remote_post(NRELATE_CSS_URL.'terms-of-service.html',$args);
+	$result = wp_remote_post('http://static.nrelate.com/common_wp/'.NRELATE_LATEST_ADMIN_VERSION.'/terms-of-service.html',$args);
 
 	if (!is_wp_error($response) && $response['response']['code']==200 && $response['response']['message']=='OK') {
 		$tos = $response['body'];
 	} else {
-		$tos = sprintf(__('Please <a href="%s" target="_blank">click here</a> to read our Terms of Service on our website.', 'nrelate'), NRELATE_CSS_URL.'terms-of-service.html');
+		$tos = sprintf(__('Please <a href="%s" target="_blank">click here</a> to read our Terms of Service on our website.', 'nrelate'), 'http://static.nrelate.com/common_wp/'.NRELATE_LATEST_ADMIN_VERSION.'/terms-of-service.html');
 	}
 		
 	$output = '<div id="nrelate-tos" style="display:none"><div id="nrelate-terms">' . $tos . '</div></div><a class="thickbox button add-new-h2" title = "nrelate Terms Of Service" href="#TB_inline?height=385&amp;width=640&amp;inlineId=nrelate-tos">Terms Of Service</a>';
@@ -212,7 +212,7 @@ add_action('nrelate_admin_page','nrelate_load_admin_scripts');
  * @since 0.47.3
  */
 function nrelate_load_admin_styles() {
-	wp_enqueue_style( 'nrelate-admin', NRELATE_ADMIN_URL . '/nrelate-admin.css' );
+	wp_enqueue_style( 'nrelate-admin', NRELATE_ADMIN_URL . '/nrelate-admin.css', array(),NRELATE_LATEST_ADMIN_VERSION );
 	wp_enqueue_style( 'qtip-style', NRELATE_ADMIN_URL . '/qtip/jquery.qtip.min.css');
 	wp_enqueue_style('thickbox');
 }
@@ -277,6 +277,8 @@ function nrelate_reindex() {
 		'timeout'=>15
     	)
 	);
+	
+	delete_option("nrelate_reindex_required");
 }
 
 /**

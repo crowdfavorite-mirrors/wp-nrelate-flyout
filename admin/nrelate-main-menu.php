@@ -126,6 +126,9 @@ echo '</h2>';
 				<div id="nr-messages" class="postbox">
 					<h3 class="hndle"><span><?php _e('Messages:')?></span></h3>
 					<ul class="inside">
+
+          <!-- Hook for PRIORITY admin messages from all nrelate plugins -->
+          <?php do_action('nrelate_priority_admin_messages');?>
 					
 					<!-- Show index status -->
 					<?php nrelate_index_check();?>	

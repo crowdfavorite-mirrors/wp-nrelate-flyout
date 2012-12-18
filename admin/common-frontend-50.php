@@ -23,7 +23,7 @@ define( 'NRELATE_COMMON_FRONTEND_50_LOADED', true );
 function nrelate_ie6_thumbnail_style() {
 	$nr_css_ie6_url = NRELATE_CSS_URL . "ie6-panels.min.css";
 	$nr_ie6_id = 'nrelate-ie6-' . str_replace(".","-",NRELATE_LATEST_ADMIN_VERSION);
-	wp_register_style($nr_ie6_id, $nr_css_ie6_url, false, null );
+	wp_register_style($nr_ie6_id, $nr_css_ie6_url, array(), NRELATE_LATEST_ADMIN_VERSION );
 	$GLOBALS['wp_styles']->add_data( $nr_ie6_id, 'conditional', 'IE 6' );
 	
 	wp_enqueue_style( 'nrelate-ie6-' . str_replace(".","-",NRELATE_LATEST_ADMIN_VERSION) );

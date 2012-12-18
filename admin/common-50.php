@@ -19,12 +19,12 @@ define( 'NRELATE_COMMON_50_LOADED', true );
 function get_nrelate_tos() {
 	
 	$args=array("timeout"=>2);
-	$response = wp_remote_post(NRELATE_CSS_URL.'terms-of-service.html',$args);
+	$response = wp_remote_post('http://static.nrelate.com/common_wp/'.NRELATE_LATEST_ADMIN_VERSION.'/terms-of-service.html',$args);
 
 	if (!is_wp_error($response) && $response['response']['code']==200 && $response['response']['message']=='OK') {
 		$tos = $response['body'];
 	} else {
-		$tos = sprintf(__('Please <a href="%s" target="_blank">click here</a> to read our Terms of Service on our website.', 'nrelate'), NRELATE_CSS_URL.'terms-of-service.html');
+		$tos = sprintf(__('Please <a href="%s" target="_blank">click here</a> to read our Terms of Service on our website.', 'nrelate'), 'http://static.nrelate.com/common_wp/'.NRELATE_LATEST_ADMIN_VERSION.'/terms-of-service.html');
 	}
 		
 	$output = '<div id="nrelate-tos"><div id="nrelate-terms">' . $tos . '</div></div>';
@@ -47,7 +47,7 @@ function nrelate_product_check(){
 	
 	$nrelate_active_plugins_versions = array();
 	
-	foreach ($nrelate_products as $plugin ) {
+	foreach ( (array) $nrelate_products as $plugin ) {
 		// Only check active plugins
 		if ($plugin['status'] > 0) {
 		// Only check active plugins of which we have the plugin_file path

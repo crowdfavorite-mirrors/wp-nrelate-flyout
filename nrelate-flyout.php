@@ -4,7 +4,7 @@ Plugin Name: nrelate Flyout
 Plugin URI: http://www.nrelate.com
 Description: Easily allow related posts to flyout from the sides of your website. Click on <a href="admin.php?page=nrelate-flyout">nrelate &rarr; Flyout</a> to configure your settings.
 Author: <a href="http://www.nrelate.com">nrelate</a> and <a href="http://www.slipfire.com">SlipFire</a>
-Version: 0.51.2
+Version: 0.51.4
 Author URI: http://nrelate.com/
 
 /*
@@ -35,9 +35,9 @@ Author URI: http://nrelate.com/
 /**
  * Define Plugin constants
  */
-define( 'NRELATE_FLYOUT_PLUGIN_VERSION', '0.51.2' );
+define( 'NRELATE_FLYOUT_PLUGIN_VERSION', '0.51.4' );
 define( 'NRELATE_FLYOUT_ADMIN_SETTINGS_PAGE', 'nrelate-flyout' );
-define( 'NRELATE_FLYOUT_ADMIN_VERSION', '0.05.1' );
+define( 'NRELATE_FLYOUT_ADMIN_VERSION', '0.05.3' );
 define( 'NRELATE_FLYOUT_NAME' , __('Flyout','nrelate'));
 define( 'NRELATE_FLYOUT_DESCRIPTION' , sprintf( __('Display related content in a cool flyout box... similarly to NYTimes.com.','nrelate')));
 
@@ -205,12 +205,12 @@ function nrelate_flyout_styles() {
 		// Only load if style not set to NONE
 		if ('none'!=$style_options[$style_type]) {
 			nrelate_ie6_thumbnail_style();
-			wp_register_style('nrelate-style-'. $style_name . "-" . str_replace(".","-",NRELATE_FLYOUT_ADMIN_VERSION), $fo_css_url, false, null );
+			wp_register_style('nrelate-style-'. $style_name . "-" . str_replace(".","-",NRELATE_FLYOUT_ADMIN_VERSION), $fo_css_url, array(), NRELATE_LATEST_ADMIN_VERSION );
 			wp_enqueue_style( 'nrelate-style-'. $style_name . "-" . str_replace(".","-",NRELATE_FLYOUT_ADMIN_VERSION) );
 		}
 		
 		// Load animation style
-		wp_register_style('nrelate-style-'. $anim_style_type . "-" . str_replace(".","-",NRELATE_FLYOUT_ADMIN_VERSION), $fo_anim_css_url, false, null );
+		wp_register_style('nrelate-style-'. $anim_style_type . "-" . str_replace(".","-",NRELATE_FLYOUT_ADMIN_VERSION), $fo_anim_css_url, array(), NRELATE_LATEST_ADMIN_VERSION );
 		wp_enqueue_style( 'nrelate-style-'. $anim_style_type . "-" . str_replace(".","-",NRELATE_FLYOUT_ADMIN_VERSION) );
 	}
 }
@@ -242,11 +242,12 @@ function nrelate_flyout_is_loading() {
 	if(is_single()){
 
 		// Load Mobile Detect
-		if (!interface_exists('Mobile_Detect')) {
+		if (!class_exists('Mobile_Detect')) {
 			require_once ( NRELATE_EXTENSIONS . '/Mobile_Detect/Mobile_Detect.php');
-			$detect = new Mobile_Detect();
 		}
-
+		
+		$detect = new Mobile_Detect();
+		
 		if ($detect->isMobile()) {
 			$is_loading=false;
 		} else {

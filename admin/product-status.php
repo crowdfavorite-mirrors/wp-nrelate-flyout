@@ -18,7 +18,7 @@ define( 'NRELATE_ADMIN_IMAGES', NRELATE_ADMIN_URL . '/images' );
 define( 'NRELATE_MIN_WP', '2.9' );
 define( 'NRELATE_MIN_PHP', '5.0' );
 
-define( 'NRELATE_ADMIN_VERSION', '0.05.1' );
+define( 'NRELATE_ADMIN_VERSION', '0.05.3' );
 
 
 // Pull the nrelate_products array
@@ -28,11 +28,13 @@ $product_status = get_option('nrelate_products');
 $related_status = isset($product_status["related"]["status"]) ? $product_status["related"]["status"] : null;
 $popular_status = isset($product_status["popular"]["status"]) ? $product_status["popular"]["status"] : null;
 $flyout_status = isset($product_status["flyout"]["status"]) ? $product_status["flyout"]["status"] : null;
+$nsquared_status = isset($product_status["nsquared"]["status"]) ? $product_status["nsquared"]["status"] : null;
 
 // Set active products to active
 if ($related_status == 1) { define( 'NRELATE_RELATED_ACTIVE', true ); }
 if ($popular_status == 1) { define( 'NRELATE_POPULAR_ACTIVE', true ); }
 if ($flyout_status == 1) { define( 'NRELATE_FLYOUT_ACTIVE', true ); }
+if ($nsquared_status == 1) { define( 'NRELATE_NSQUARED_ACTIVE', true ); }
 
 /**
 * Try to find latest admin version.
