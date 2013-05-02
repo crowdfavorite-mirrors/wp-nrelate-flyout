@@ -225,7 +225,7 @@ function setting_flyout_loc(){
 	
 	foreach($directions as $direction){ 
 			$checked = ($options['flyout_loc']==$direction) ? ' checked="checked" ' : '';
-			echo "<label for='flyout_loc_".$direction."'><input ".$checked." id='flyout_loc_".$direction."' value='$direction' name='nrelate_flyout_options[flyout_loc]' type='radio' />$direction</label><br/>";
+			echo "<label for='flyout_loc_".$direction."'><input ".$checked." id='flyout_loc_".$direction."' value='$direction' name='nrelate_flyout_options[flyout_loc]' type='radio' /> $direction</label><br/>";
 	}
 }
 
@@ -236,7 +236,7 @@ function setting_flyout_animation(){
 	
 	foreach($methods as $method){ 
 			$checked = ($options['flyout_animation']==$method) ? ' checked="checked" ' : '';
-			echo "<label for='flyout_animation_".$method."'><input ".$checked." id='flyout_animation_".$method."' value='$method' name='nrelate_flyout_options[flyout_animation]' type='radio' />$method</label><br/>";
+			echo "<label for='flyout_animation_".$method."'><input ".$checked." id='flyout_animation_".$method."' value='$method' name='nrelate_flyout_options[flyout_animation]' type='radio' /> $method</label><br/>";
 	}
 }
 
@@ -246,7 +246,7 @@ function setting_flyout_offset() {
 	$methods = array(1=>"Middle of Article",2=>"End of Article",3=>"Bottom of Page",4=>"Custom");
 	foreach($methods as $key=>$value){
 			$checked = ($options['flyout_offset']==$key) ? ' checked="checked" ' : '';
-			echo "<label for='flyout_offset_".$key."'><input ".$checked." id='flyout_offset_".$key."' value='$key' name='nrelate_flyout_options[flyout_offset]' type='radio' onClick='show_custom_element(this);' />$value</label><br/>";
+			echo "<label for='flyout_offset_".$key."'><input ".$checked." id='flyout_offset_".$key."' value='$key' name='nrelate_flyout_options[flyout_offset]' type='radio' onClick='show_custom_element(this);' /> $value</label><br/>";
 	}
 	$javascript = <<< JAVA_SCRIPT
 	function show_custom_element(current){
@@ -428,7 +428,7 @@ function setting_flyout_custom_field() {
 function setting_flyout_nonjs(){
 	$options = get_option('nrelate_flyout_options');
 	$values=array("js","nonjs");
-	$valuedescription = array ("js" => __("<strong>Javascript:</strong> Stable and fast",'nrelate'), "nonjs" => __("<strong>No Javascript:</strong> BETA VERSION: Allows search engines to index our plugin and may help your SEO.",'nrelate')); 
+	$valuedescription = array ("js" => __("<strong>Javascript:</strong> Stable and fast",'nrelate'), "nonjs" => __("<strong>BETA VERSION:</strong> Detects search engines and allows them to index our plugin to help your SEO.",'nrelate')); 
 	$i=0;
 	foreach($values as $value){
 		$checked = (isset($options['flyout_nonjs']) && $options['flyout_nonjs']==$i) ? ' checked="checked" ' : '';

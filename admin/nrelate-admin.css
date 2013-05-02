@@ -298,11 +298,11 @@ padding: 4px 20px 6px;
 	padding: 0px 10px 10px 0;
 	text-align: center;
 	width: 100px;
+	margin: 0 0 0 15px;
 	}
 #style-gallery .style-image {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 0 0 15px;
 	}
 #style-gallery a.nrelate_preview_button {
     float: left;

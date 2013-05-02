@@ -102,7 +102,7 @@
 					});
 				
 				// Keep track of changes on form's inputs
-				$(':input').live('change keyup', function(){
+				$(document).live('change keyup', ':input', function(){
 					$form = $(this).closest('form');
 					if ( $form.serialize() != $form.data('init_status') ) {
 						$form.data( 'is_dirty', true );

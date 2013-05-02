@@ -4,7 +4,7 @@ Plugin Name: nrelate Flyout
 Plugin URI: http://www.nrelate.com
 Description: Easily allow related posts to flyout from the sides of your website. Click on <a href="admin.php?page=nrelate-flyout">nrelate &rarr; Flyout</a> to configure your settings.
 Author: <a href="http://www.nrelate.com">nrelate</a> and <a href="http://www.slipfire.com">SlipFire</a>
-Version: 0.51.4
+Version: 0.52.0
 Author URI: http://nrelate.com/
 
 /*
@@ -35,7 +35,7 @@ Author URI: http://nrelate.com/
 /**
  * Define Plugin constants
  */
-define( 'NRELATE_FLYOUT_PLUGIN_VERSION', '0.51.4' );
+define( 'NRELATE_FLYOUT_PLUGIN_VERSION', '0.52.0' );
 define( 'NRELATE_FLYOUT_ADMIN_SETTINGS_PAGE', 'nrelate-flyout' );
 define( 'NRELATE_FLYOUT_ADMIN_VERSION', '0.05.3' );
 define( 'NRELATE_FLYOUT_NAME' , __('Flyout','nrelate'));
@@ -290,9 +290,9 @@ function nrelate_flyout_wrap_post($content) {
 	if ( nrelate_should_inject('flyout') ) {
 		$original = $content;
 
-		$content  = "<div id='nr_fo_top_of_post'></div>";
+		$content  = "<div id='nrelate_flyout_placeholder'>";
 		$content .= $original;
-		$content .= "<div id='nr_fo_bot_of_post'></div> ";
+		$content .= "</div> ";
 	}
 	
 	return $content;
@@ -322,9 +322,6 @@ function nrelate_flyout_should_inject_filter($should_inject) {
 add_filter('nrelate_flyout_should_inject', 'nrelate_flyout_should_inject_filter', 0);
 
 
-// FLYOUT: this function will build the js for flyout
-require_once ( NRELATE_FLYOUT_SETTINGS_DIR . '/flyout_frontend.php' );
-
 /**
  * Primary function
  *
@@ -339,7 +336,7 @@ $nr_fo_counter = 0;
 function nrelate_flyout() {
 	global $post, $nr_fo_counter, $fo_styleclass, $fo_layout;
 	
-	$animation_fix = $nr_fo_nonjsbody = $nr_fo_nonjsfix = $nr_fo_js_str = $flyout_js_str= '';
+	$animation_fix = $nr_fo_nonjsbody = '';
 	
 	if ( nrelate_flyout_is_loading() )  {	
 		$nr_fo_counter++;
@@ -354,12 +351,12 @@ function nrelate_flyout() {
 		$nr_fo_width_class = 'nr_' . (($nrelate_flyout_options['flyout_thumbnail']=='Thumbnails') ? $nrelate_flyout_options['flyout_thumbnail_size'] : "text");
 		
 		// Get the page title and url array
-		$nrelate_title_url = nrelate_title_url();
+		$nrelate_title_url = nrelate_title_url( false );
 	
 		$nonjs=$nrelate_flyout_options['flyout_nonjs'];
 		
 		$nr_url = "http://api.nrelate.com/fow_wp/" . NRELATE_FLYOUT_PLUGIN_VERSION . "/?tag=nrelate_flyout";
-		$nr_url .= "&keywords=$nrelate_title_url[post_title]&domain=" . NRELATE_BLOG_ROOT . "&url=$nrelate_title_url[post_urlencoded]&nr_div_number=".$nr_fo_counter;
+		$nr_url .= "&keywords=" . urlencode($nrelate_title_url[post_title]) . "&domain=" . NRELATE_BLOG_ROOT . "&url=" .urlencode($nrelate_title_url[post_urlencoded]) . "&nr_div_number=".$nr_fo_counter;
 		$nr_url .= is_home() ? '&source=hp' : '';
 		
 		$nr_url = apply_filters('nrelate_api_url', $nr_url, $post->ID);
@@ -374,50 +371,15 @@ function nrelate_flyout() {
 			if (!empty($nrelate_flyout_options_ads['flyout_ad_animation'])) {
 				$animation_fix = '';
 			}
-			//FLY OUT ANIMATION FIX
-			$frombot = $nrelate_flyout_options['flyout_from_bot'];
-			$frombottype = $nrelate_flyout_options['flyout_from_bot_type'];
-			$flyout_width = $nrelate_flyout_options['flyout_anim_width'];
-			$flyout_width_type = $nrelate_flyout_options['flyout_anim_width_type'];
-			$position = $nrelate_flyout_options['flyout_loc'] == "Right" ? "right" : "left";
-			$flyout_hide_width = 0;
-			if($flyout_width_type=="px"){
-				$flyout_hide_width=-($flyout_width+40);
-			}else{
-				$flyout_hide_width=-($flyout_width+4);
-			}
-			if ($nrelate_flyout_options['flyout_animation'] == "Fade") {
-				$flyout_animation_type = 'fade';
-		        $flyout_animation= "<style type='text/css'>.nrelate_flyout {display:hidden; ".$position.": 0px; bottom: ".$frombot.$frombottype."; width:".$flyout_width.$flyout_width_type.";} #nrelate_flyout_open{display:none; ".$position.":0px; bottom: ".$frombot.$frombottype.";}";
-		    } else {
-				$flyout_animation_type = 'slideout';
-		        $flyout_animation= "<style type='text/css'>.nrelate_flyout {display:block; ".$position.": ".$flyout_hide_width.$flyout_width_type."; bottom: ".$frombot.$frombottype."; width:".$flyout_width.$flyout_width_type.";} #nrelate_flyout_open{display:block; ".$position.": -80px;bottom: ".$frombot.$frombottype.";}";
-		    }
-		    $flyout_animation.=" #nrelate_flyout_close{background: #fff url(".NRELATE_FLYOUT_PLUGIN_URL."/images/close_window.gif) no-repeat 0 0} </style>";
-			$flyout_type_position = strtolower( $flyout_animation_type . '_' . $position );
-			
-		    //This call makes the js for flyout
-			$flyout_js_str=nrelate_flyout_makejs();
-		}
-		if (!defined('NRELATE_HOME')) {
-			define('NRELATE_HOME', true);
-			$domain = addslashes(NRELATE_BLOG_ROOT);
-			$nr_domain_init = "nRelate.domain = \"{$domain}\";";
-		} else {
-			$nr_domain_init = '';
 		}
 		
-		if($nonjs){
+		if( $nonjs && nrelate_is_crawler() ){
 		    $args=array("timeout"=>2);
 			$response=wp_remote_get($nr_url."&nonjs=1",$args);
 
 		    if( !is_wp_error( $response ) ){
 			    if($response['response']['code']==200 && $response['response']['message']=='OK'){
 				    $nr_fo_nonjsbody=$response['body'];
-			   		$nr_fo_nonjsfix='<script type="text/javascript">'.$nr_domain_init.'nRelate.fixHeight("nrelate_flyout_'.$nr_fo_counter.'"); ';
-			   		$nr_fo_nonjsfix.='nRelate.adAnimation("nrelate_flyout_'.$nr_fo_counter.'"); ';
-					$nr_fo_nonjsfix.='nRelate.tracking("fo"); ';
-					$nr_fo_nonjsfix.=$flyout_js_str.'</script>';
 			    }else{
 			    	$nr_fo_nonjsbody="<!-- nrelate error: nrelate server not 200. -->";
 			    }
@@ -425,31 +387,13 @@ function nrelate_flyout() {
 		    	$nr_fo_nonjsbody="<!-- nrelate error: WP-request to nrelate server failed. -->";
 		    }
 		}
-		else{
-			$nr_fo_js_str= <<<EOD
-	<script type="text/javascript">
-	/*<![CDATA[*/
-		$flyout_js_str
-		$nr_domain_init
-		var entity_decoded_nr_url = jQuery('<div/>').html("$nr_url").text();
-		nRelate.getNrelatePosts(entity_decoded_nr_url);
-	/*]]>*/
-	</script>
-EOD;
-		}
+
 		$markup = <<<EOD
 $animation_fix
-$flyout_animation
-	<div id="nrelate_flyout_{$nr_fo_counter}" class="nrelate nrelate_flyout nr_$flyout_type_position nr_animate_type_$flyout_animation_type $fo_anim_style_code $fo_style_code $fo_layout_code $nr_fo_width_class">$nr_fo_nonjsbody</div>
-	<!--[if IE 6]>
-		<script type="text/javascript">jQuery('.$fo_style_code').removeClass('$fo_style_code');</script>
-	<![endif]-->
-	$nr_fo_nonjsfix
-	$nr_fo_js_str
-    <div id='nrelate_flyout_open' class='$fo_anim_style_code nr_$flyout_type_position'></div>
+$nr_fo_nonjsbody
 EOD;
 
-echo $markup;
+		echo $markup;
 
 	}
 }

@@ -88,7 +88,7 @@ function flyout_anim_slideout_styles() {
 				<input id="nrelate_style_<?php echo $style_code; ?>" <?php echo $checked; ?> type="radio" name="nrelate_flyout_anim_options_styles[flyout_anim_slideout_style]" value="<?php echo $style_code; ?>" /><br />
 				<?php echo $style_name; ?><br />
 			</label>
-				<img class="style-image" src="<?php echo NRELATE_FLYOUT_IMAGE_DIR; ?>/anim_style_<?php echo $style_code; ?>.png"  alt="<?php echo $style_code; ?>" />
+				<img class="style-image" src="<?php echo NRELATE_FLYOUT_IMAGE_DIR; ?>/anim_style_<?php echo $style_code; ?>.png"  alt="<?php echo $style_code; ?>" style="width:380px; height:auto; float:left;" />
 			<div id="info-style-<?php echo $style_code;?>" class="style-features-info">
 				<div class="style-features"><?php echo $nrelate_slideout_anim_style['features']; ?></div>
 				<div class="style-info">

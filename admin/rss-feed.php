@@ -245,7 +245,7 @@ function nrelate_post_count() {
  * returns false if no img URL found
  */
 function nrelate_get_img_url( $url ) {
-	if ( !$url = trim( (string) $url ) ) return false;
+	if ( !is_string( $url ) || (!$url = trim( (string) $url) ) ) return false;
 	$parsed = parse_url( html_entity_decode($url) );
 	
 	if( isset($parsed['query']) ) {
