@@ -3,8 +3,7 @@ Contributors: nrelate, slipfire, sbruner
 Tags: related posts, related content, related, pages, post, posts, fly-out, flyout, slider, fade, thumbnails, animated, animation, box, featured, jquery, new york times, NYTimes, nrelate
 Tested up to: 3.6
 Requires at least: 2.9
-Stable tag: 0.52.0
-
+Stable tag: 0.52.1
 
 Display related content in a cool flyout box... similarly to NYTimes.com.
 
@@ -107,6 +106,10 @@ Our plugin will work on websites in the following languages: Dutch, English, Fre
 
 
 == Changelog ==
+
+= 0.52.1 =
+* Bug fix for installs in subfolders.
+* Changed name of common_frontend.js to nrelate_js.js for backwards compatibility with WP-Minify.
 
 = 0.52.0 =
 * New Javascript version.

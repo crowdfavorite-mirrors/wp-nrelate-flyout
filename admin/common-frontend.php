@@ -75,8 +75,8 @@ function nrelate_init_plugins() {
 
 
 	if( array_sum($plugins) > 0 ) {
-		$domain = esc_js(NRELATE_BLOG_ROOT);
-		$loader_url = NRELATE_ADMIN_URL . '/common_frontend'. ( NRELATE_JS_DEBUG ? '' : '.min') .'.js';
+		$domain = esc_js(urldecode(NRELATE_BLOG_ROOT)); // The JS automatically encodes, so we decode here.
+		$loader_url = NRELATE_ADMIN_URL . '/nrelate_js'. ( NRELATE_JS_DEBUG ? '' : '.min') .'.js?ver=' . NRELATE_LATEST_ADMIN_VERSION;
 
 		$options = array( "plugins" => array() );
 		$async = "async";
